@@ -1,0 +1,65 @@
+﻿
+@font-face {
+    font-family: 'Andika-R';
+    src: url('../fonts/Andika-R.ttf') format('truetype');
+}
+
+body {
+    font-family: Andika-R;
+}
+
+#lblDurum {
+    margin: 30px;
+    display: block;
+    text-align: center;
+}
+
+.btn-group label {
+    padding-left: 40px;
+}
+
+.bosOda {
+    background-color: lightgreen;
+}
+
+.doluOda {
+    background-color: lightgray;
+}
+
+.modalOpen {
+    overflow:auto;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1000;
+}
+
+.modalClose {
+    display: none;
+}
+
+#registerModal{
+    overflow:scroll;
+}
+
+#loginClose, #registerClose {
+    float: right;
+    position: fixed;
+    margin: 30px;
+    width: 50px;
+    right: 10px;
+}
+
+.modal-dialog {
+    max-width: fit-content;
+}
+
+.modal-dialog span{
+    font-size:small;
+}
+
+.modal-footer {
+    text-align: center;
+}

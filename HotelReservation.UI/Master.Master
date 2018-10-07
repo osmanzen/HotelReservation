@@ -1,0 +1,523 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="HotelReservation.UI.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon.ico" sizes="16x16">
+     
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- uikit -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/datepicker.css" />
+    <!-- Owl carousel 2 css -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- rev slider -->
+    <link rel="stylesheet" href="css/rev-slider/settings.css" />
+    <!-- lightslider -->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <!-- Theme -->
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/Smurfs.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header_area">
+            <!-- start header top -->
+            <div class="header_top_area">
+                <div class="container">
+                    <div class="row">
+                        <div class="header_top clearfix">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="left_header_top">
+                                    <ul>
+                                        <li><a href="#">
+                                            <img src="img/temp-icon.png" alt="temp-icon">Türkiye , TR 17°C</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 floatright">
+                                <div class="right_header_top clearfix floatright">
+                                    <ul class="nav navbar-nav">
+                                        <li class="">
+                                            <asp:Panel ID="Panel1" runat="server">
+                                            </asp:Panel>
+                                        </li>
+                                        <li class="">
+                                            <asp:Panel ID="pnlLogin" runat="server">
+                                                <a class="btn-sm" data-toggle="modal" data-target="#girisModal">GİRİŞ</a>
+                                                <a class="btn-sm" data-toggle="modal" data-target="#kayitModal">KAYIT</a>
+                                            </asp:Panel>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header top  -->
+
+            <!-- start main header -->
+            <div class="main_header_area">
+                <div class="container">
+                    <!-- start mainmenu & logo -->
+                    <div class="mainmenu">
+                        <div id="nav">
+                            <nav class="navbar navbar-default">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <div class="site_logo fix">
+                                        <a id="brand" class="clearfix navbar-brand" href="index.aspx">
+                                            <img src="img/site-logo.png" alt="Trips"></a>
+                                        <!-- <div class="header_login floatleft">
+                                          <ul>
+                                              <li><a href="#">Login</a></li>
+                                              <li><a href="#">Register</a></li>
+                                          </ul>
+                                      </div>  -->
+                                    </div>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li role="presentation">
+                                            <a href="index.aspx">ANASAYFA</a>
+                                        </li>
+                                        <li><a href="konaklama.aspx">KONAKLAMA</a></li>
+                                        <li><a href="Galeri.aspx">GALERİ</a></li>
+                                        <li><a href="hakkimizda.aspx">HAKKIMIZDA</a></li>
+                                        <li><a href="iletisim.aspx">İLETİŞİM</a></li>
+                                    </ul>
+                                    <div class="emergency_number">
+                                        <a href="tel:+902423161010">
+                                            <img src="img/call-icon.png" alt="">+90(242) 316 10 10</a>
+                                    </div>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- end mainmenu and logo -->
+                </div>
+            </div>
+            <!-- end main header -->
+        </header>
+
+
+
+
+
+
+
+        <%--CONTENTPLACEHOLDER--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <%--CONTENTPLACEHOLDER--%>
+
+
+
+
+
+
+
+        <div>
+            <!-- Hizmetler -->
+            <section class="another_facitilies_area" style="margin-top: 50px">
+                <div class="container">
+                    <div class="another_facitilies clearfix padding-bottom-100">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="single_facities">
+                                <a href="#">
+                                    <img src="img/home-facilities-icon-eleven.png" alt=""></a>
+                                <h6>Restoran</h6>
+                                <p> Dünya mutfaklarının ve Türk mutfaklarının en özel lezzetlerini sunan restoranlarımız ile şehrin gözdesiyiz.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="single_facities">
+                                <a href="#">
+                                    <img src="img/home-facilities-icon-seven.png" alt=""></a>
+                                <h6>Spor Klübü</h6>
+                                <p>Spor salonumuz 7/24 hizmetinizdedir. İstediğiniz üyelik paketimizi alıp indirimlerden faydalanabilirsiniz. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="single_facities">
+                                <a href="#">
+                                    <img src="img/home-facilities-icon-eight.png" alt=""></a>
+                                <h6>Araba Servis Hizmeti</h6>
+                                <p>Birbirinden lüks araçlarımızla sizi havaalanından otelimize getiriyor; otelimizden havalalanına kadar götürüyoruz.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="single_facities">
+                                <a href="#">
+                                    <img src="img/home-facilities-icon-nine.png" alt=""></a>
+                                <h6>BAR</h6>
+                                <p>Rahatlatıcı bir atmosfer, lezzetli içkiler, haftasonu DJ performansı eşliğinde kokteyllerimizi denemeyi unutmayın.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+            <!-- start contact us area -->
+            <section class="contact_us_area content-left">
+                <div class="container">
+                    <div class="contact_us clearfix">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="call clearfix">
+                                <h6>Bizi Arayın</h6>
+                                <p>0(242) 316 10 10</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="email_us clearfix">
+                                <h6>Bize Yazın</h6>
+                                <p>info@hotelbooking.com</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="news_letter clearfix">
+                                <input type="text" placeholder="Gazete için mail girin">
+                                <a href="#" class="btn btn-blue">OK</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="social_icons clearfix">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end contact us area -->
+
+
+            <!-- start footer -->
+            <footer class="footer_area">
+                <div class="container">
+                    <div class="footer">
+                        <div class="footer_top padding-top-80 clearfix">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="footer_widget">
+                                    <div class="footer_logo">
+                                        <a href="#">
+                                            <img src="img/footer-logo-one.png" alt=""></a>
+                                    </div>
+                                    <p>5 Yıldızlı Otelimiz gün boyu hizmetinizdedir.Muhteşem bir atmosferde rahatlık ve konfor arıyorsanız bize ulaşın.</p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <i class="fa fa-map-marker"></i>Taksim ,İstanbul
+                                                <br>
+                                                TÜRKİYE
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="row">
+                                    <div class="footer_widget clearfix">
+                                        <h5 class="padding-left-15">Hızlı Bağlantılar</h5>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <ul>
+                                                <li><a href="#">Odalar</a></li>
+                                                <li><a href="#">Yiyecek ve İçecek</a></li>
+                                                <li><a href="#">Plaj Mekanları</a></li>
+                                                <li><a href="#">Rahatlıklar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 sol-sm-6">
+                                            <ul>
+                                                <li><a href="#">İstanbul Rehberi</a></li>
+                                                <li><a href="#">Spa ve Hamam</a></li>
+                                                <li><a href="#">Hakkımızda</a></li>
+                                                <li><a href="#">İletişim</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="footer_widget">
+                                    <h5>BİZ GLOBALİZ</h5>
+                                    <div class="footer_map">
+                                        <a href="#">
+                                            <img src="img/footer-map-two.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="container">
+                                <div class="footer_copyright margin-tb-50 content-center">
+                                    <p>© 2015 <a href="#">Hotelbooking</a>. All rights reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+
+
+
+        <!-- Modal Login-->
+        <div class="modal fade" id="girisModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h6>KİMLİK NO: </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtLoginNo" Style="margin-left: 10px" runat="server" TextMode="Number" MaxLength="11" ValidationGroup="login"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="loginNoValid" runat="server" ErrorMessage="Kimlik No Boş Geçilemez" ControlToValidate="txtLoginNo" ValidateRequestMode="Inherit" Display="Dynamic" Text="*" ValidationGroup="login"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h6>ŞİFRE : </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtLoginPassword" Style="margin-left: 10px" runat="server" TextMode="Password"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="loginPasswordValid" runat="server" ErrorMessage="Şifre Boş Geçilemez" ControlToValidate="txtLoginPassword" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" SetFocusOnError="True" ValidationGroup="login"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Kimlik Numaranız 11 Haneli Olmalı." ControlToValidate="txtLoginNo" Display="Dynamic" SetFocusOnError="True" ValidationGroup="login" Visible="True" Font-Size="Small" ValidationExpression="\d{11}"></asp:RegularExpressionValidator>
+
+                        <asp:Button ID="submitLogin" CssClass="btn btn-success btn-block" Style="color: black" runat="server" Text="Giriş" OnClick="SubmitLogin_Click" UseSubmitBehavior="False" ValidationGroup="login" />
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal Login-->
+
+
+        <!-- Modal Register-->
+        <div class="modal fade" id="kayitModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h6>KİMLİK NO: </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtRegNo" Style="margin-left: 10px" runat="server" TextMode="Number" MaxLength="11" ValidationGroup="register"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="regNoValid" runat="server" ErrorMessage="Kimlik No Boş Geçilemez" ControlToValidate="txtRegNo" ValidateRequestMode="Enabled" Display="None" Text="*" ValidationGroup="register" Visible="True" SetFocusOnError="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                                <td>
+                                    <asp:RegularExpressionValidator ID="tckontrol" runat="server" ErrorMessage="Kimlik Numaranız 11 Haneli Olmalı." ControlToValidate="txtRegNo" Display="Dynamic" SetFocusOnError="True" ValidationGroup="register" Visible="True" Font-Size="Small" ValidationExpression="\d{11}"></asp:RegularExpressionValidator>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <h6>E-MAIL:  </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtRegMail" Style="margin-left: 10px" TextMode="Email" ValidationGroup="register" runat="server"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="regLastValid" runat="server" ErrorMessage="E-Mail Boş Geçilemez" ControlToValidate="txtRegMail" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" ValidationGroup="register" Visible="True" SetFocusOnError="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                                <td>
+                                    <asp:RegularExpressionValidator ID="mailRegular" runat="server" ErrorMessage="Geçerli bir e-mail adresi giriniz." ValidationGroup="register" ValidationExpression="\w+\w*\@\w+\w+\w*\.(com|edu|org|gov|com.tr|org.tr|net|net.tr)" ControlToValidate="txtRegMail" Visible="True" SetFocusOnError="True" Font-Size="Small"></asp:RegularExpressionValidator>
+
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <h6>AD:  </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtRegName" Style="margin-left: 10px" TextMode="SingleLine" ValidationGroup="register" runat="server"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="regNameValid" runat="server" ErrorMessage="Ad Boş Geçilemez" ControlToValidate="txtRegName" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" ValidationGroup="register" SetFocusOnError="True" Visible="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <h6>SOYAD: </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtRegLast" Style="margin-left: 10px" TextMode="SingleLine" ValidationGroup="register" runat="server"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Soydınız Boş Geçilemez" ControlToValidate="txtRegLast" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" ValidationGroup="register" Visible="True" SetFocusOnError="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h6>TELEFON: </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtregPhonne" Style="margin-left: 10px" TextMode="Phone" ValidationGroup="register" runat="server"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Telefon Boş Geçilemez" ControlToValidate="txtregPhonne" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" ValidationGroup="register" SetFocusOnError="True" Visible="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <h6>ŞİFRE: </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtRegPass" Style="margin-left: 10px" TextMode="Password" ValidationGroup="register" runat="server"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Şifre Boş Geçilemez." ControlToValidate="txtRegPass" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" ValidationGroup="register" Visible="True" SetFocusOnError="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td>
+                                    <h6>ŞİFRE TEKRAR: </h6>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txtRegConfirm" Style="margin-left: 10px" TextMode="Password" ValidationGroup="register" runat="server" Visible="True"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Şifre Tekrar Boş Geçilemez." ControlToValidate="txtRegPass" ValidateRequestMode="Enabled" Display="Dynamic" Text="*" ValidationGroup="register" Visible="True" SetFocusOnError="True" Font-Size="Small"></asp:RequiredFieldValidator>
+                                </td>
+                                <td>
+                                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Şifreler Aynı Değil." ValueToCompare="txtRegConfirm" ValidationGroup="register" SetFocusOnError="True" ControlToCompare="txtRegPass" ControlToValidate="txtRegConfirm" Visible="True" Display="Dynamic" Font-Size="Small"></asp:CompareValidator>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                    <asp:Button ID="submitRegister" CssClass="btn btn-success btn-block" Style="color: black" runat="server" Text="Kaydet" OnClick="submitRegister_Click" UseSubmitBehavior="False" ValidationGroup="register" />
+                </div>
+            </div>
+        </div>
+        <!-- Modal Register-->
+
+
+
+        <asp:TextBox ID="regFirst" placeholder="Adınız" runat="server" required=""></asp:TextBox>
+
+        <asp:TextBox ID="regLast" placeholder="Soyadınız" runat="server" required=""></asp:TextBox>
+
+        <asp:TextBox ID="regEmail" placeholder="E-Mail" runat="server" required=""></asp:TextBox>
+
+        <asp:TextBox ID="regPhone" placeholder="Telefon" runat="server" required=""></asp:TextBox>
+
+        <asp:TextBox ID="regPassword" type="password" name="password" placeholder="Şifre" runat="server" required=""></asp:TextBox>
+
+    </form>
+</body>
+</html>
+
+
+
+<!-- jquery library -->
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<!-- bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- uikit -->
+<!-- easing -->
+<script src="js/jquery.easing.1.3.min.js"></script>
+<script src="js/datepicker.js"></script>
+<!-- scroll up -->
+<script src="js/jquery.scrollUp.min.js"></script>
+<!-- owlcarousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- lightslider -->
+<script src="js/lightslider.js"></script>
+<!-- rev slider -->
+<script src="js/rev-slider/rs-plugin/jquery.themepunch.plugins.min.js"></script>
+<script src="js/rev-slider/rs-plugin/jquery.themepunch.revolution.js"></script>
+<script src="js/rev-slider/rs.home.js"></script>
+<!-- wow Animation -->
+<script src="js/wow.min.js"></script>
+<!--Activating WOW Animation only for modern browser-->
+<!--[if !IE]><!-->
+<script type="text/javascript">new WOW().init();</script>
+<!--<![endif]-->
+
+<!--Oh Yes, IE 9+ Supports animation, lets activate for IE 9+-->
+<!--[if gte IE 9]>
+            <script type="text/javascript">new WOW().init();</script>
+        <![endif]-->
+
+<!--Opacity & Other IE fix for older browser-->
+<!--[if lte IE 8]>
+            <script type="text/javascript" src="js/ie-opacity-polyfill.js"></script>
+        <![endif]-->
+
+
+
+<!-- my js -->
+<script src="js/main.js"></script>
+
+<script src="js/myquery.js"></script>

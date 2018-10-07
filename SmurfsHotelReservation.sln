@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.UI", "HotelReservation.UI\HotelReservation.UI.csproj", "{A715314F-BD26-4148-A2BD-0590AE400960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.Model", "ModelClassLibrary\HotelReservation.Model.csproj", "{BF2BC1B5-E658-41D6-B067-B9F09E633A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.DAL", "HotelReservation.DAL\HotelReservation.DAL.csproj", "{6F439FDF-D723-4282-869A-512D26215187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.BLL", "HotelReservation.BLL\HotelReservation.BLL.csproj", "{72E0D0FD-ABAD-486F-AD84-172486722773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A715314F-BD26-4148-A2BD-0590AE400960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A715314F-BD26-4148-A2BD-0590AE400960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A715314F-BD26-4148-A2BD-0590AE400960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A715314F-BD26-4148-A2BD-0590AE400960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2BC1B5-E658-41D6-B067-B9F09E633A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2BC1B5-E658-41D6-B067-B9F09E633A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2BC1B5-E658-41D6-B067-B9F09E633A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2BC1B5-E658-41D6-B067-B9F09E633A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F439FDF-D723-4282-869A-512D26215187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F439FDF-D723-4282-869A-512D26215187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F439FDF-D723-4282-869A-512D26215187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F439FDF-D723-4282-869A-512D26215187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E0D0FD-ABAD-486F-AD84-172486722773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E0D0FD-ABAD-486F-AD84-172486722773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E0D0FD-ABAD-486F-AD84-172486722773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E0D0FD-ABAD-486F-AD84-172486722773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3912BAA0-5E7B-4AE2-AFAF-612B93D2D99A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://thesmurfs.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HotelReservation.UI\\HotelReservation.UI.csproj
+		SccProjectName1 = HotelReservation.UI
+		SccLocalPath1 = HotelReservation.UI
+		SccProjectUniqueName2 = ModelClassLibrary\\HotelReservation.Model.csproj
+		SccProjectName2 = ModelClassLibrary
+		SccLocalPath2 = ModelClassLibrary
+		SccProjectUniqueName3 = HotelReservation.DAL\\HotelReservation.DAL.csproj
+		SccProjectName3 = HotelReservation.DAL
+		SccLocalPath3 = HotelReservation.DAL
+		SccProjectUniqueName4 = HotelReservation.BLL\\HotelReservation.BLL.csproj
+		SccProjectName4 = HotelReservation.BLL
+		SccLocalPath4 = HotelReservation.BLL
+	EndGlobalSection
+EndGlobal

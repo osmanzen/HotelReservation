@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A715314F-BD26-4148-A2BD-0590AE400960}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelReservation.UI</RootNamespace>
+    <AssemblyName>HotelReservation.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\assets\arrowleft.png" />
+    <Content Include="css\assets\arrowright.png" />
+    <Content Include="css\assets\arrow_large_left.png" />
+    <Content Include="css\assets\arrow_large_right.png" />
+    <Content Include="css\assets\arrow_left.png" />
+    <Content Include="css\assets\arrow_left2.png" />
+    <Content Include="css\assets\arrow_left3_hr.png" />
+    <Content Include="css\assets\arrow_right.png" />
+    <Content Include="css\assets\arrow_right2.png" />
+    <Content Include="css\assets\arrow_right3.png" />
+    <Content Include="css\assets\arrow_right3_hr.png" />
+    <Content Include="css\assets\black50.png" />
+    <Content Include="css\assets\boxed_bgtile.png" />
+    <Content Include="css\assets\bullet.png" />
+    <Content Include="css\assets\bullets.png" />
+    <Content Include="css\assets\bullets2.png" />
+    <Content Include="css\assets\bullet_boxed.png" />
+    <Content Include="css\assets\coloredbg.png" />
+    <Content Include="css\assets\grain.png" />
+    <Content Include="css\assets\large_left.png" />
+    <Content Include="css\assets\large_right.png" />
+    <Content Include="css\assets\loader.gif" />
+    <Content Include="css\assets\navigdots.png" />
+    <Content Include="css\assets\navigdots_bgtile.png" />
+    <Content Include="css\assets\new-left-arrow.jpg" />
+    <Content Include="css\assets\new-left-hover-arrow.jpg" />
+    <Content Include="css\assets\new-right-arrow.jpg" />
+    <Content Include="css\assets\new-right-hover-arrow.jpg" />
+    <Content Include="css\assets\shadow1.png" />
+    <Content Include="css\assets\shadow2.png" />
+    <Content Include="css\assets\shadow3.png" />
+    <Content Include="css\assets\small_left.png" />
+    <Content Include="css\assets\small_left_boxed.png" />
+    <Content Include="css\assets\small_right.png" />
+    <Content Include="css\assets\small_right_boxed.png" />
+    <Content Include="css\assets\timer.png" />
+    <Content Include="css\assets\timerdot.png" />
+    <Content Include="css\assets\transparent.jpg" />
+    <Content Include="css\assets\white50.png" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\lightslider.css" />
+    <Content Include="css\new-left-arrow.jpg" />
+    <Content Include="css\new-left-hover-arrow.jpg" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\rev-slider\settings.css" />
+    <Content Include="css\Smurfs.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\uikit.docs.min.css" />
+    <Content Include="css\uikit.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Galeri.aspx" />
+    <Content Include="hakkimizda.aspx" />
+    <Content Include="iletisim.aspx" />
+    <Content Include="img\about-hotel-thumb.jpg" />
+    <Content Include="img\about-us-breadcrumb.jpg" />
+    <Content Include="img\about-us-staff-eight.jpg" />
+    <Content Include="img\about-us-staff-five.jpg" />
+    <Content Include="img\about-us-staff-four.jpg" />
+    <Content Include="img\about-us-staff-one.jpg" />
+    <Content Include="img\about-us-staff-seven.jpg" />
+    <Content Include="img\about-us-staff-six.jpg" />
+    <Content Include="img\about-us-staff-three.jpg" />
+    <Content Include="img\about-us-staff-two.jpg" />
+    <Content Include="img\about-us-thumb.jpg" />
+    <Content Include="img\accomodation-breadcrumb-one.jpg" />
+    <Content Include="img\accomodation-breadcrumb.jpg" />
+    <Content Include="img\american-express.png" />
+    <Content Include="img\author_photo.jpg" />
+    <Content Include="img\blog-pic-link-bg.png" />
+    <Content Include="img\blog-pic1.jpg" />
+    <Content Include="img\blog-pic3.jpg" />
+    <Content Include="img\blog-pic4.jpg" />
+    <Content Include="img\blog-pic5.jpg" />
+    <Content Include="img\blog-pic6.jpg" />
+    <Content Include="img\blog-pic7.jpg" />
+    <Content Include="img\booking-step-one.jpg" />
+    <Content Include="img\call-icon.png" />
+    <Content Include="img\close_blue.png" />
+    <Content Include="img\comment_photo_1.jpg" />
+    <Content Include="img\comment_photo_2.jpg" />
+    <Content Include="img\comment_photo_3.jpg" />
+    <Content Include="img\comment_photo_4.jpg" />
+    <Content Include="img\customer-says-one.png" />
+    <Content Include="img\customer-slider-bg-one.png" />
+    <Content Include="img\customer-slider-bg.png" />
+    <Content Include="img\discover.png" />
+    <Content Include="img\dropdown_bg.png" />
+    <Content Include="img\error_bg.jpg" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\footer-logo-one.png" />
+    <Content Include="img\footer-map-one.png" />
+    <Content Include="img\footer-map-two.jpg" />
+    <Content Include="img\gallery-breadcrumb.jpg" />
+    <Content Include="img\gallery-five.jpg" />
+    <Content Include="img\gallery-four.jpg" />
+    <Content Include="img\gallery-one.jpg" />
+    <Content Include="img\gallery-three.jpg" />
+    <Content Include="img\gallery-two.jpg" />
+    <Content Include="img\google-pin-one.png" />
+    <Content Include="img\google-pin.png" />
+    <Content Include="img\home-facilities-icon-eight.png" />
+    <Content Include="img\home-facilities-icon-eleven.png" />
+    <Content Include="img\home-facilities-icon-five.png" />
+    <Content Include="img\home-facilities-icon-four.png" />
+    <Content Include="img\home-facilities-icon-nine.png" />
+    <Content Include="img\home-facilities-icon-one.png" />
+    <Content Include="img\home-facilities-icon-seven.png" />
+    <Content Include="img\home-facilities-icon-six.png" />
+    <Content Include="img\home-facilities-icon-ten.png" />
+    <Content Include="img\home-facilities-icon-three.png" />
+    <Content Include="img\home-facilities-icon-twelve.png" />
+    <Content Include="img\home-facilities-icon-two.png" />
+    <Content Include="img\homepage.jpg" />
+    <Content Include="img\hotel-facilities-bg.jpg" />
+    <Content Include="img\hotel-facility-one.jpg" />
+    <Content Include="img\hotel-facility-three.jpg" />
+    <Content Include="img\hotel-facility-two.jpg" />
+    <Content Include="img\lightslider-img\controls.png" />
+    <Content Include="img\lightslider-img\cS-16.jpg" />
+    <Content Include="img\lightslider-img\cS-17.jpg" />
+    <Content Include="img\lightslider-img\cS-18.jpg" />
+    <Content Include="img\lightslider-img\cS-19.jpg" />
+    <Content Include="img\lightslider-img\cS-20.jpg" />
+    <Content Include="img\lightslider-img\cS-21.jpg" />
+    <Content Include="img\lightslider-img\cS-22.jpg" />
+    <Content Include="img\lightslider-img\cS-23.jpg" />
+    <Content Include="img\lightslider-img\cS-24.jpg" />
+    <Content Include="img\lightslider-img\cS-25.jpg" />
+    <Content Include="img\lightslider-img\cS-26.jpg" />
+    <Content Include="img\lightslider-img\cS-27.jpg" />
+    <Content Include="img\lightslider-img\cS-28.jpg" />
+    <Content Include="img\lightslider-img\cS-29.jpg" />
+    <Content Include="img\lightslider-img\cS-30.jpg" />
+    <Content Include="img\lightslider-img\cS-31.jpg" />
+    <Content Include="img\lightslider-img\cS-32.jpg" />
+    <Content Include="img\lightslider-img\cS-33.jpg" />
+    <Content Include="img\lightslider-img\cS-34.jpg" />
+    <Content Include="img\lightslider-img\cS-35.jpg" />
+    <Content Include="img\lightslider-img\cS-36.jpg" />
+    <Content Include="img\lightslider-img\cS-37.jpg" />
+    <Content Include="img\lightslider-img\cS-38.jpg" />
+    <Content Include="img\lightslider-img\cS-39.jpg" />
+    <Content Include="img\lightslider-img\cS-40.jpg" />
+    <Content Include="img\lightslider-img\cS-41.jpg" />
+    <Content Include="img\lightslider-img\cS-42.jpg" />
+    <Content Include="img\lightslider-img\cS-43.jpg" />
+    <Content Include="img\lightslider-img\cS-44.jpg" />
+    <Content Include="img\lightslider-img\cS-45.jpg" />
+    <Content Include="img\lightslider-img\cS-46.jpg" />
+    <Content Include="img\lightslider-img\cS-47.jpg" />
+    <Content Include="img\lightslider-img\cS-48.jpg" />
+    <Content Include="img\lightslider-img\cS-49.jpg" />
+    <Content Include="img\lightslider-img\cS-50.jpg" />
+    <Content Include="img\lightslider-img\cS-51.jpg" />
+    <Content Include="img\lightslider-img\cS-52.jpg" />
+    <Content Include="img\lightslider-img\cS-53.jpg" />
+    <Content Include="img\lightslider-img\cS-54.jpg" />
+    <Content Include="img\lightslider-img\cS-55.jpg" />
+    <Content Include="img\login_register.jpg" />
+    <Content Include="img\maestro.png" />
+    <Content Include="img\news-one.jpg" />
+    <Content Include="img\news-three.jpg" />
+    <Content Include="img\news-two.jpg" />
+    <Content Include="img\nice-title-breadcrumb.png" />
+    <Content Include="img\nice-title-error.png" />
+    <Content Include="img\nice-title.png" />
+    <Content Include="img\paypal.png" />
+    <Content Include="img\recent_blog_post-1.png" />
+    <Content Include="img\recent_blog_post-2.jpg" />
+    <Content Include="img\recent_blog_post-2.png" />
+    <Content Include="img\recent_blog_post-3.jpg" />
+    <Content Include="img\recent_blog_post-3.png" />
+    <Content Include="img\recent_blog_post.png" />
+    <Content Include="img\rev-slider\rev\assets\arrowleft.png" />
+    <Content Include="img\rev-slider\rev\assets\arrowright.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_large_left.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_large_right.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_left.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_left2.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_left3.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_left3_hr.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_right.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_right2.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_right3.png" />
+    <Content Include="img\rev-slider\rev\assets\arrow_right3_hr.png" />
+    <Content Include="img\rev-slider\rev\assets\black50.png" />
+    <Content Include="img\rev-slider\rev\assets\boxed_bgtile.png" />
+    <Content Include="img\rev-slider\rev\assets\bullet.png" />
+    <Content Include="img\rev-slider\rev\assets\bullets.png" />
+    <Content Include="img\rev-slider\rev\assets\bullets2.png" />
+    <Content Include="img\rev-slider\rev\assets\bullet_boxed.png" />
+    <Content Include="img\rev-slider\rev\assets\coloredbg.png" />
+    <Content Include="img\rev-slider\rev\assets\grain.png" />
+    <Content Include="img\rev-slider\rev\assets\large_left.png" />
+    <Content Include="img\rev-slider\rev\assets\large_right.png" />
+    <Content Include="img\rev-slider\rev\assets\navigdots.png" />
+    <Content Include="img\rev-slider\rev\assets\navigdots_bgtile.png" />
+    <Content Include="img\rev-slider\rev\assets\shadow1.png" />
+    <Content Include="img\rev-slider\rev\assets\shadow2.png" />
+    <Content Include="img\rev-slider\rev\assets\shadow3.png" />
+    <Content Include="img\rev-slider\rev\assets\small_left.png" />
+    <Content Include="img\rev-slider\rev\assets\small_left_boxed.png" />
+    <Content Include="img\rev-slider\rev\assets\small_right.png" />
+    <Content Include="img\rev-slider\rev\assets\small_right_boxed.png" />
+    <Content Include="img\rev-slider\rev\assets\timer.png" />
+    <Content Include="img\rev-slider\rev\assets\timerdot.png" />
+    <Content Include="img\rev-slider\rev\assets\transparent.jpg" />
+    <Content Include="img\rev-slider\rev\assets\white50.png" />
+    <Content Include="img\rev-slider\slider-one.jpg" />
+    <Content Include="img\rev-slider\slider-two.jpg" />
+    <Content Include="img\room-image-eight.png" />
+    <Content Include="img\room-image-eighteen.jpg" />
+    <Content Include="img\room-image-eighteen.png" />
+    <Content Include="img\room-image-eleven.jpg" />
+    <Content Include="img\room-image-fifteen.jpg" />
+    <Content Include="img\room-image-fifteen.png" />
+    <Content Include="img\room-image-five.png" />
+    <Content Include="img\room-image-four.png" />
+    <Content Include="img\room-image-fourteen.jpg" />
+    <Content Include="img\room-image-nine.png" />
+    <Content Include="img\room-image-nineteen.jpg" />
+    <Content Include="img\room-image-nineteen.png" />
+    <Content Include="img\room-image-one.png" />
+    <Content Include="img\room-image-seven.png" />
+    <Content Include="img\room-image-seventeen.jpg" />
+    <Content Include="img\room-image-seventeen.png" />
+    <Content Include="img\room-image-six.png" />
+    <Content Include="img\room-image-sixteen.jpg" />
+    <Content Include="img\room-image-sixteen.png" />
+    <Content Include="img\room-image-ten.jpg" />
+    <Content Include="img\room-image-thirteen.jpg" />
+    <Content Include="img\room-image-three.png" />
+    <Content Include="img\room-image-twelve.jpg" />
+    <Content Include="img\room-image-twenty.jpg" />
+    <Content Include="img\room-image-twenty.png" />
+    <Content Include="img\room-image-two.png" />
+    <Content Include="img\room-thumb-one.jpg" />
+    <Content Include="img\room-thumb-three.jpg" />
+    <Content Include="img\room-thumb-two.jpg" />
+    <Content Include="img\showcase-slider-five.jpg" />
+    <Content Include="img\showcase-slider-four.jpg" />
+    <Content Include="img\showcase-slider-one.jpg" />
+    <Content Include="img\showcase-slider-seven.jpg" />
+    <Content Include="img\showcase-slider-six.jpg" />
+    <Content Include="img\showcase-slider-three.jpg" />
+    <Content Include="img\showcase-slider-two.jpg" />
+    <Content Include="img\showcase-slider-zoom.png" />
+    <Content Include="img\sing_blog_photo_1.jpg" />
+    <Content Include="img\sing_blog_photo_2.jpg" />
+    <Content Include="img\site-logo.png" />
+    <Content Include="img\special-offer-main.png" />
+    <Content Include="img\special-offer-yellow-main.png" />
+    <Content Include="img\special-offer-yellow.png" />
+    <Content Include="img\special-offer.png" />
+    <Content Include="img\temp-icon.png" />
+    <Content Include="img\visa.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\datepicker.js" />
+    <Content Include="js\grid.js" />
+    <Content Include="js\jquery.easing.1.3.min.js" />
+    <Content Include="js\jquery.scrollUp.min.js" />
+    <Content Include="js\lightslider.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\myquery.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\rev-slider\rs-plugin\jquery.themepunch.plugins.min.js" />
+    <Content Include="js\rev-slider\rs-plugin\jquery.themepunch.revolution.js" />
+    <Content Include="js\rev-slider\rs.home.js" />
+    <Content Include="js\uikit-lightbox.js" />
+    <Content Include="js\uikit-modal.js" />
+    <Content Include="js\uikit.min.js" />
+    <Content Include="js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="konaklama.aspx" />
+    <Content Include="memberinfo.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="fonts\Andika-R.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\JosefinSans-Regular.ttf" />
+    <Content Include="fonts\Raleway-Regular.ttf" />
+    <Content Include="Master.Master" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="reservation.aspx" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="style.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Galeri.aspx.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Galeri.aspx.designer.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hakkimizda.aspx.cs">
+      <DependentUpon>hakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hakkimizda.aspx.designer.cs">
+      <DependentUpon>hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="konaklama.aspx.cs">
+      <DependentUpon>konaklama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="konaklama.aspx.designer.cs">
+      <DependentUpon>konaklama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="memberinfo.aspx.cs">
+      <DependentUpon>memberinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="memberinfo.aspx.designer.cs">
+      <DependentUpon>memberinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reservation.aspx.cs">
+      <DependentUpon>reservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reservation.aspx.designer.cs">
+      <DependentUpon>reservation.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelReservation.BLL\HotelReservation.BLL.csproj">
+      <Project>{72e0d0fd-abad-486f-ad84-172486722773}</Project>
+      <Name>HotelReservation.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModelClassLibrary\HotelReservation.Model.csproj">
+      <Project>{bf2bc1b5-e658-41d6-b067-b9f09e633a1d}</Project>
+      <Name>HotelReservation.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4349</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4349/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
